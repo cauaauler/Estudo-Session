@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id'])){
-    header("location: /crud_login/index.php");
+    header("location: /IFRS-Estudo-Session/index.php");
 }
 ?>
 <!DOCTYPE html>
@@ -10,13 +10,13 @@ if(!isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar livro</title>
-    <link rel="stylesheet" type="text/css" href="/crud_login/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/IFRS-Estudo-Session/css/style.css" />
 </head>
 <body>
     <div class='container'>
         <div class='box'>
             <h1>Adicionar livro</h1>
-            <form method='post' action='/crud_login/src/addLivro.php'>
+            <form method='post' action='/IFRS-Estudo-Session/src/addLivro.php'>
                 <label for=titulo>Título</label>
                 <input type=text id=titulo required name=titulo>
                 <br>
@@ -31,8 +31,8 @@ if(!isset($_SESSION['id'])){
                 </div>
             </form>
         </div>
-        <a href='/crud_login/src/logout.php'>Sair</a>
-        <a href='/crud_login/src/restrita_lista.php'>Voltar</a>
+        <a href='/IFRS-Estudo-Session/src/logout.php'>Sair</a>
+        <a href='/IFRS-Estudo-Session/src/restrita_lista.php'>Voltar</a>
     </div>
 </body>
 </html>

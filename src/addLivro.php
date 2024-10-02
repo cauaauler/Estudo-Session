@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id'])){
-    header("location: /crud_login/index.php");
+    header("location: /IFRS-Estudo-Session/index.php");
 }
 
     if(isset($_POST)){
@@ -21,5 +21,5 @@ if(!isset($_SESSION['id'])){
         //Executa a consulta e armazena o resultado
         $stmt->execute();
 
-        header("location:/crud_login/src/restrita_lista.php");
+        header("location:/IFRS-Estudo-Session/src/restrita_lista.php");
     }
