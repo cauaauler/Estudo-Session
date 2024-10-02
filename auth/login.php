@@ -1,7 +1,7 @@
 <?php
 // Se não veio do formulário, volta para a página inicial
 if(!isset($_POST['botao'])){
-    header("location: index.php");
+    header("location: /crud_login/index.php");
 }
 
 $email = filter_var($_POST['email'],FILTER_SANITIZE_EMAIL);
@@ -23,7 +23,7 @@ $resultado = $stmt->get_result();
 // Se não tem resultados
 if($resultado->num_rows==0){
     // Redireciona para a página inicial
-    header("location: index.php");
+    header("location: /crud_login/index.php");
 }else{
     // Transforma um objeto mysqli em um array associativo
     // Usa-se quando tem um resultado apenas
@@ -41,9 +41,9 @@ if($resultado->num_rows==0){
         //$_SESSION['email'] = $pessoa['email'];
 
         //Redireciona para área restrita
-        header("location:restrita_lista.php");
+        header("location:/crud_login/src/restrita_lista.php");
     }else{
         //Redireciona para a página inicial
-        header("location: index.php");
+        header("location: /crud_login/index.php");
     }
 }

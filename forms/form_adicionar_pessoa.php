@@ -25,7 +25,7 @@
         $stmt->execute();
 
         //Redireciona
-        header("location: index.php");
+        header("location: /crud_login/index.php");
     }   
 ?>
 <!DOCTYPE html>
@@ -34,13 +34,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adicionar Pessoa</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/crud_login/css/style.css" />
 </head>
 <body>
     <div class='container'>
         <div class='box'>
             <h1>Adicionar pessoa</h1>
-            <form method='post' action='form_adicionar_pessoa.php'>
+            <form method='post' action='/crud_login/forms/form_adicionar_pessoa.php'>
                 <label>E-mail:</label>
                 <input type='text' name='email' require>
                 <label>Senha:</label>
@@ -48,7 +48,7 @@
                 <div class='grupo_botao'>
                     <input type='submit' name='botao' value='Adicionar'>
                 </div>
-                <a href='index.php'>Voltar</a>
+                <a href='/crud_login/index.php'>Voltar</a>
             </form>
         </div>
     </div>

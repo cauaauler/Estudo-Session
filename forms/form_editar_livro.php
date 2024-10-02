@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['id'])){
-    header("location: index.php");
+    header("location: /crud_login/index.php");
 }
     if(isset($_GET)){
         //Conexão com o banco de dados
@@ -28,13 +28,13 @@ if(!isset($_SESSION['id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar livro</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="/crud_login/css/style.css" />
 </head>
 <body>
     <div class='container'>
         <div class='box'>
             <h1>Editar livro</h1>
-            <form method='post' action='editLivro.php'>
+            <form method='post' action='/crud_login/src/editLivro.php'>
                 <label for=titulo>Título</label>
                 <?php
                     echo "<input type=text id=titulo required name=titulo value='{$livro['titulo']}'>";
@@ -52,8 +52,8 @@ if(!isset($_SESSION['id'])){
                 </div>        
             </form>
         </div>
-        <a href='logout.php'>Sair</a>
-        <a href='restrita_lista.php'>Voltar</a>
+        <a href='/crud_login/src/logout.php'>Sair</a>
+        <a href='/crud_login/src/restrita_lista.php'>Voltar</a>
     </div>  
 </body>
 </html>

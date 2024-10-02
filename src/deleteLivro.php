@@ -1,7 +1,7 @@
 <?php 
 session_start();
 if(!isset($_SESSION['id'])){
-    header("location: index.php");
+    header("location: /crud_login/index.php");
 }
 
     if(isset($_GET)){
@@ -16,6 +16,5 @@ if(!isset($_SESSION['id'])){
         
         $stmt->execute();
 
-        header("location:restrita_lista.php");
+        header("location:/crud_login/src/restrita_lista.php");
     }
-?>
